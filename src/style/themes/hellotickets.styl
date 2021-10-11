@@ -1,0 +1,285 @@
+$main-color = #6a7ae6
+$second-color = #5d7adc
+$font-color = rgba(48, 50, 93, 0.7)
+$font-color-inactive = rgba(48, 50, 93, 0.56)
+$in-range-bg = #eef2fc
+$in-range-bg-hover = #f7faff
+
+@require "../flatpickr"
+
+.flatpickr-calendar
+  color $font-color
+  font-family 'ApercuPro', sans-serif
+  box-shadow none
+
+.singleRange .startRange:before
+  content none !important
+
+.flatpickr-wrapper
+  position fixed
+  background rgba(48,50,93,.9)
+  top 0
+  left 0
+  height 100%
+  width 100%
+
+.flatpickr-close
+  height 56px
+  border-radius 4px 4px 0 0
+  border-bottom 1px solid #D1D1D1
+  background-color white
+  background-image url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTYnIHZpZXdCb3g9JzAgMCAxNiAxNicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNOS40MTUwMiA4LjAwMDE3TDE1LjcwNjggMS43MDgxQzE2LjA5NzcgMS4zMTc1MiAxNi4wOTc3IDAuNjgzNzc1IDE1LjcwNjggMC4yOTMxODlDMTUuMzE1OSAtMC4wOTc3Mjk4IDE0LjY4MjkgLTAuMDk3NzI5OCAxNC4yOTIgMC4yOTMxODlMOC4wMDAxNyA2LjU4NTI1TDEuNzA4MDMgMC4yOTMxODlDMS4zMTcxMyAtMC4wOTc3Mjk4IDAuNjg0MDggLTAuMDk3NzI5OCAwLjI5MzE3NyAwLjI5MzE4OUMtMC4wOTc3MjU3IDAuNjgzNzc1IC0wLjA5NzcyNTcgMS4zMTc1MiAwLjI5MzE3NyAxLjcwODFMNi41ODUzMSA4LjAwMDE3TDAuMjkzMTc3IDE0LjI5MjJDLTAuMDk3NzI1NyAxNC42ODI4IC0wLjA5NzcyNTcgMTUuMzE2NiAwLjI5MzE3NyAxNS43MDcxQzAuNDg4NjI5IDE1LjkwMjMgMC43NDQ3ODMgMTYgMS4wMDA2IDE2QzEuMjU2NDMgMTYgMS41MTI1OCAxNS45MDIzIDEuNzA4MDMgMTUuNzA2OEw4LjAwMDE3IDkuNDE0NzVMMTQuMjkyIDE1LjcwNjhDMTQuNDg3NCAxNS45MDIzIDE0Ljc0MzYgMTYgMTQuOTk5NCAxNkMxNS4yNTUyIDE2IDE1LjUxMTQgMTUuOTAyMyAxNS43MDY4IDE1LjcwNjhDMTYuMDk3NyAxNS4zMTYyIDE2LjA5NzcgMTQuNjgyNSAxNS43MDY4IDE0LjI5MTlMOS40MTUwMiA4LjAwMDE3WicgZmlsbD0nI0QxRDFEMScvPjwvc3ZnPgo=");
+  background-position center right 16px
+  background-repeat no-repeat
+  color black
+
+.flatpickr-months .flatpickr-month
+  height 56px
+  line-height: 20px
+
+.flatpickr-months
+  position: relative
+
+.flatpickr-current-month
+  display flex
+  align-items center
+  justify-content center
+  padding 0
+  margin 0
+  text-align center
+  font-size 16px
+  line-height 24px
+  height 56px
+
+  span.cur-month
+    font-weight bold
+    margin 0
+    color 303838
+    font-size 16px
+
+    &:hover
+      background none
+
+  input.cur-year[disabled]
+    color inherit
+
+.flatpickr-current-month .numInputWrapper
+  //display none
+
+.flatpickr-current-month .numYearWrapper
+  display inline
+
+.flatpickr-current-month .numYearWrapper .cur-year
+  display inline-block
+  width 40px
+  font-weight bold
+  margin 0
+  color 303838
+  font-size 16px
+
+.flatpickr-weekday
+  font-family 'ApercuPro', sans-serif
+  font-style normal
+  font-weight 500
+  font-size 14px
+  line-height 17px
+  color #484F4F !important
+
+.flatpickr-months .flatpickr-next-month.flatpickr-next-month
+  height 56px
+  width 37px
+  display flex
+  align-items center
+  justify-content center
+  padding 0
+  margin 0
+  fill $main-color
+
+  &:hover svg
+    fill $second-color
+
+.flatpickr-months .flatpickr-prev-month
+  height 56px
+  width 37px
+  display flex
+  align-items center
+  justify-content center
+  padding 0
+  margin 0
+  fill $main-color
+
+  &:hover svg
+    fill $second-color
+
+.flatpickr-innerContainer
+  color $font-color
+  font-family 'Apercu Pro', sans-serif
+
+.dayContainer
+  padding-bottom 16px
+  width 100%
+  max-width 100%
+  display flex
+  flex-direction row
+  align-items flex-start
+
+.flatpickr-days
+  width 100%
+
+.flatpickr-day
+  margin 0 0 1px !important
+  padding 0
+  font-weight normal
+  color rgba(48, 50, 93, 0.7)
+  font-size 14px
+  box-sizing border-box
+  height 32px
+  line-height 32px
+  border-radius 0
+  border none
+  max-width initial
+
+  &.nextMonthDay,
+  &.prevMonthDay
+    color: #D1D1D1
+
+  &.disabled
+    opacity 0.4
+
+    &:hover
+      color $font-color
+      cursor default
+      background none
+
+  &:hover
+    position relative
+    border none
+    background none
+    opacity 0.3
+    color #fff
+
+    &:after
+      content ''
+      position absolute
+      left 0
+      right 0
+      margin-left auto
+      margin-right auto
+      height 32px
+      width 32px
+      border-radius 50%
+      background-color $main-color
+      z-index -1
+
+  &.today
+    border none
+    background none !important
+
+  &.selected
+    background none !important
+    border none
+    border-radius none
+    color #fff
+
+    &:after
+      content ''
+      position absolute
+      left 0
+      right 0
+      margin-left auto
+      margin-right auto
+      height 32px
+      width 32px
+      border-radius 50%
+      background-color $main-color
+      z-index -1
+
+  &.inRange
+    background $in-range-bg
+    border none !important
+    box-shadow none
+
+    &:hover
+      background $in-range-bg-hover
+      opacity 1
+      color $font-color
+
+      &:after
+        content none
+
+  &.startRange
+    color #ffffff
+    background none !important
+    border none !important
+    border-radius none !important
+    box-shadow unset !important
+
+    &:after
+      content ''
+      position absolute
+      left 0
+      right 0
+      margin-left auto
+      margin-right auto
+      height 32px
+      width 32px
+      border-radius 50%
+      background-color $main-color
+      z-index -1
+
+    &:before
+      content ''
+      position absolute
+      width 50%
+      height 100%
+      background-color $in-range-bg
+      display block
+      z-index -1
+      right 0
+      box-shadow none
+
+    &:hover
+      opacity 1
+      box-shadow unset
+
+  &.endRange
+    color #ffffff
+    background none !important
+    border none !important
+    border-radius none !important
+    box-shadow unset !important
+
+    &:after
+      content ''
+      position absolute
+      left 0
+      right 0
+      margin-left auto
+      margin-right auto
+      height 32px
+      width 32px
+      border-radius 50%
+      background-color $main-color
+      z-index -1
+
+    &:before
+      content ''
+      position absolute
+      width 50%
+      height 100%
+      background-color $in-range-bg
+      display block
+      z-index -1
+
+    &:hover
+      opacity 1
+
+.flatpickr-disabled
+  color $font-color-inactive !important
+  opacity .2 !important
+
+  &:hover
+    opacity .2
+
+    &:after
+      content none
