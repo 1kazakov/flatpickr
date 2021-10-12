@@ -67,7 +67,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com:hellotickets/flatpickr.git"
+    "url": "git://github.com:1kazakov/flatpickr.git"
   },
   "dependencies": {}
 }
