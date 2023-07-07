@@ -44,3 +44,5 @@ cp github.com/hellotickets/vue-flatpickr-component/src/style/themes/hellotickets
 
 ## Supporting flatpickr
 Based on https://github.com/flatpickr/flatpickr
+
+test
